@@ -1,0 +1,18 @@
+import javax.swing.JOptionPane;
+
+public class numm13 {
+    public static void main(String[] args) {
+        int[] grades = new int[10];
+        for (int i = 0; i < grades.length; i++) {
+            grades[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter grade " + (i+1) + ":"));
+        }
+
+        int pass = 0, fail = 0;
+        for (int g : grades) {
+            if (g >= 75) pass++;
+            else fail++;
+        }
+
+        JOptionPane.showMessageDialog(null, "Pass: " + pass + "\nFail: " + fail);
+    }
+}
