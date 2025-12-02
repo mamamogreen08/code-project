@@ -1,0 +1,22 @@
+import javax.swing.JOptionPane;
+
+public class numba17 {
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter integer " + (i+1) + ":"));
+        }
+
+        int highest = Integer.MIN_VALUE, second = Integer.MIN_VALUE;
+        for (int x : arr) {
+            if (x > highest) {
+                second = highest;
+                highest = x;
+            } else if (x > second && x != highest) {
+                second = x;
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "Second highest: " + second);
+    }
+}
