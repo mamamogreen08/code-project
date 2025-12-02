@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+public class num15 {
+    public static void main(String[] args) {
+        int[] nums = new int[5];
+        String greater50 = "";
+
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter number " + (i+1) + ":"));
+            if (nums[i] > 50) greater50 += nums[i] + " ";
+        }
+
+        JOptionPane.showMessageDialog(null, "Numbers greater than 50: " + greater50);
+    }
+}
