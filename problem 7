@@ -1,0 +1,18 @@
+import javax.swing.JOptionPane;
+
+public class num7 {
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter integer " + (i+1) + ":"));
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) arr[i] = -arr[i]; // convert to positive
+        }
+
+        String result = "Converted array: ";
+        for (int x : arr) result += x + " ";
+        JOptionPane.showMessageDialog(null, result);
+    }
+}
