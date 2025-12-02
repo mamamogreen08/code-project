@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class ask user repeatedly for num 1-100 {
+public class num1 {
     public static void main(String[] args) {
         int num;
         do {
