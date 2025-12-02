@@ -1,0 +1,10 @@
+import javax.swing.JOptionPane;
+
+public class numb16 {
+    public static void main(String[] args) {
+        int num = Integer.parseInt(JOptionPane.showInputDialog("Enter a number:"));
+        int digits = String.valueOf(num).length();
+
+        JOptionPane.showMessageDialog(null, num + " has " + digits + " digits.");
+    }
+}
