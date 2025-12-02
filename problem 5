@@ -1,0 +1,22 @@
+import javax.swing.JOptionPane;
+
+public class num5 {
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter integer " + (i+1) + ":"));
+        }
+
+        int target = Integer.parseInt(JOptionPane.showInputDialog("Enter value to search:"));
+        int foundIndex = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                foundIndex = i;
+                break; // stop loop early
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, foundIndex == -1 ? "Not found" : "Found at index " + foundIndex);
+    }
+}
